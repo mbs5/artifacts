@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobs vs Internships — Strategy Briefing for a Summer 2027 CS Grad</title>
+<meta name="description" content="Research-backed strategy: should a summer-2027 CS graduate on F-1 chase internships or full-time roles? Timeline, CPT/OPT guardrails, 2026 market data.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #5c5c5c;
+    --line: #e6e2d9;
+    --paper: #fdfcf9;
+    --accent: #1d4ed8;
+    --verdict-bg: #f0f7f0;
+    --verdict-line: #2f7d32;
+    --warn-bg: #fff8e6;
+    --warn-line: #b8860b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+  header.page { padding: 56px 0 8px; }
+  header.page h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; }
+  header.page .sub { color: var(--muted); font-size: 1.05rem; margin: 0 0 6px; }
+  header.page .date { color: var(--muted); font-size: 0.9rem; }
+  .verdict {
+    border-left: 4px solid var(--verdict-line);
+    background: var(--verdict-bg);
+    padding: 20px 24px;
+    margin: 32px 0;
+    border-radius: 0 8px 8px 0;
+  }
+  .verdict p { margin: 0; font-size: 1.1rem; }
+  .verdict strong { font-size: 1.15rem; }
+  h2 { font-size: 1.45rem; margin: 48px 0 16px; letter-spacing: -0.01em; }
+  h3 { font-size: 1.1rem; margin: 28px 0 8px; }
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 16px; padding-left: 24px; }
+  li { margin-bottom: 8px; }
+  li::marker { color: var(--muted); }
+  .reason { margin-bottom: 20px; }
+  .reason strong { display: block; margin-bottom: 2px; }
+  .reason p { margin: 0; color: #333; }
+  .cite { font-size: 0.85rem; color: var(--muted); }
+  .cite a { color: var(--muted); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .timeline { list-style: none; padding: 0; margin: 0; }
+  .timeline li {
+    position: relative;
+    padding: 0 0 24px 28px;
+    margin: 0;
+    border-left: 2px solid var(--line);
+  }
+  .timeline li:last-child { padding-bottom: 4px; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -7px; top: 6px;
+    width: 12px; height: 12px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--accent);
+  }
+  .timeline li.hot::before { background: var(--accent); }
+  .timeline .month { font-weight: 700; font-size: 1rem; }
+  .timeline p { margin: 4px 0 0; font-size: 0.98rem; color: #333; }
+  .callout {
+    border: 1px solid var(--warn-line);
+    background: var(--warn-bg);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 0.98rem;
+  }
+  .callout p { margin: 0 0 8px; }
+  .callout p:last-child { margin: 0; }
+  .iss { background: #f4f6fb; border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; margin: 20px 0; font-size: 0.98rem; }
+  .iss p { margin: 0 0 6px; }
+  .iss p:last-child { margin: 0; }
+  .sources { font-size: 0.9rem; color: var(--muted); }
+  .sources li { margin-bottom: 6px; }
+  .sources a { color: var(--muted); word-break: break-all; }
+  footer { border-top: 1px solid var(--line); margin-top: 56px; padding: 24px 0 64px; color: var(--muted); font-size: 0.9rem; }
+  footer a { color: var(--muted); }
+  nav.top { padding: 16px 0; font-size: 0.92rem; color: var(--muted); }
+  nav.top a { color: var(--muted); }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    header.page h1 { font-size: 1.6rem; }
+  }
+</style>
+</head>
+<body>
+<nav class="top"><div class="wrap"><a href="/">Artifact Library</a> &nbsp;/&nbsp; Career</div></nav>
+<div class="wrap">
+
+<header class="page">
+  <h1>Jobs vs Internships</h1>
+  <p class="sub">A research-backed strategy for a summer-2027 computer science graduate on an F-1 visa — built from current 2026 sources, tuned to a founding-engineer profile.</p>
+  <p class="date">September 30, 2026 · Research briefing</p>
+</header>
+
+<div class="verdict">
+  <p><strong>Go after full-time. Keep internships as a narrow hedge.</strong><br>
+  Target full-time new-grad SWE, AI-engineer, and early/founding-engineer roles starting after graduation. A summer-2027 internship only makes sense as a part-time, ISS-approved backup at a confirmed sponsoring employer with a real conversion path.</p>
+</div>
+
+<h2>Why full-time wins for this profile</h2>
+
+<div class="reason">
+  <strong>1. Summer 2027 is the final semester.</strong>
+  <p>UB's international office bars full-time CPT (21+ hrs/week) in a student's final semester — only part-time CPT (20 hrs/week or less) is allowed. Stacking even a part-time internship on top of 10–12 summer credits is a heavy load for low leverage. <span class="cite">[UB International Student Services, verified Sept 30, 2026]</span></p>
+</div>
+<div class="reason">
+  <strong>2. An intern title discounts real leverage.</strong>
+  <p>This isn't a typical junior: founding backend engineer on a multi-tenant platform doing $12M+ annualized revenue, shipped MCP servers and a CLI for AI catalog operations, a live MCP-based AI coach used inside Claude and ChatGPT. The 2026 market structurally rewards exactly that — SignalFire's 2026 data shows new-grad hiring down ~65% at big tech vs 2019 while engineering hiring overall fell only ~11%, because employers now buy "production-ready, ship-on-day-one" engineers, not apprentices. That premium only pays out in roles priced for it. <span class="cite">[Startup Fortune / SignalFire, Sept 2026]</span></p>
+</div>
+<div class="reason">
+  <strong>3. Return-offer pipelines are real but conditional.</strong>
+  <p>NACE's 2026 survey found a five-year-high intern conversion rate of 63.1% — but only at formal intern programs at reporting employers, and the same analysis notes it says almost nothing about any individual's odds: teams convert 90% or 0% based on headcount and luck. An internship is strategically useful only at a confirmed sponsoring employer where a return offer converts into full-time employment plus an H-1B path. <span class="cite">[AInvest / NACE, Aug 2026]</span></p>
+</div>
+<div class="reason">
+  <strong>4. The immigration math favors full-time.</strong>
+  <p>A summer CPT internship only helps if it produces an offer letter before the program ends, enabling a seamless start on post-completion OPT. Otherwise it burns the last pre-graduation months — plus tuition for the CPT-required course — without buying sponsorship certainty. (Part-time CPT doesn't threaten OPT eligibility; only 12+ cumulative months of full-time CPT wipes it out.) <span class="cite">[UB ISS]</span></p>
+</div>
+<div class="reason">
+  <strong>5. The #1 target doesn't recruit interns.</strong>
+  <p>Seed and Series-A startups building LLM agents in verticals like health, agriculture, and finance hire full-time founding and early engineers — usually through founder conversations, not intern programs.</p>
+</div>
+
+<h2>Month-by-month: October 2026 → fall 2027</h2>
+<p>Big-tech new-grad recruiting for 2027 grads is already open now (fall 2026). Startups hire much closer to the start date. Run both clocks in parallel — they are not sequential, and the fall new-grad window can't be recovered in spring. <span class="cite">[Harvard FAS tech recruiting guidance, Aug 2026]</span></p>
+
+<ol class="timeline">
+  <li class="hot">
+    <span class="month">October 2026 — now</span>
+    <p>The big-tech 2027 new-grad window is live. Apply to every 2027 new-grad and AI-engineer posting as it opens; these close on rolling bases. Start an H-1B-sponsor shortlist and ask about sponsor status early. Begin warm outreach to founders and engineers at startups building LLM agents in healthcare, agriculture, and finance.</p>
+  </li>
+  <li>
+    <span class="month">November – December 2026</span>
+    <p>Keep the new-grad applications going. Finish the fall semester. Prepare proof, not promises: a personal site with live demos of shipped work — 2026 hiring data shows AI roles screen for deployed systems, not theory.</p>
+  </li>
+  <li>
+    <span class="month">January – February 2027</span>
+    <p>Big-tech interview rounds for 2027 cohorts typically conclude; offers land. Prepare for the H-1B cap registration window (~early March): an employer can only register someone they employ or have offered.</p>
+  </li>
+  <li>
+    <span class="month">March 2027</span>
+    <p>Expected FY2028 H-1B cap registration window (~$215 per beneficiary; the lottery is now wage-weighted, so entry-level wages get a single entry). Confirm exact dates as they are announced.</p>
+  </li>
+  <li class="hot">
+    <span class="month">April – May 2027</span>
+    <p>Commencement. The OPT application window opens — USCIS must receive the I-765 no earlier than 90 days before and no later than 60 days after the program end date, and within 30 days of the DSO's recommendation. USCIS processing runs 3–5 months, so apply as early as the window allows. No job offer is required to apply.</p>
+  </li>
+  <li class="hot">
+    <span class="month">June – July 2027</span>
+    <p>Startup hiring peak. Just-in-time founding-engineer and AI-engineer roles post and fill fast, often in under a week. This is the #1 target window, entered on post-completion OPT.</p>
+  </li>
+  <li>
+    <span class="month">August 2027</span>
+    <p>Program end after the final 10–12 credits. Post-completion OPT begins on the chosen start date — and the 90-day unemployment clock starts ticking. Have employment lined up, or a qualifying backup confirmed with ISS (unpaid degree-related work and properly documented contract or self-employment in CS can count).</p>
+  </li>
+  <li>
+    <span class="month">September – November 2027</span>
+    <p>Fall backstop: consulting firms, finance tech, and mid-size SaaS keep hiring; YC jobs and Wellfound refresh daily. If approaching the 90-day unemployment limit on OPT, employment must be secured and reported.</p>
+  </li>
+  <li>
+    <span class="month">October 1, 2027</span>
+    <p>H-1B cap start date for anyone selected in the March 2027 lottery with an approved petition (cap-gap would have bridged OPT through September 30).</p>
+  </li>
+</ol>
+
+<h2>F-1 mechanics: CPT and OPT</h2>
+<p>All of the following is general guidance drawn from UB's International Student Services pages (verified live September 30, 2026). Immigration details are case-specific — confirm everything below with UB ISS before acting.</p>
+
+<h3>Curricular Practical Training (CPT)</h3>
+<ul>
+  <li><strong>Final semester:</strong> only part-time CPT (20 hrs/week or less) can be authorized; full-time CPT (21+ hrs/week) cannot be authorized in the final semester of the academic program.</li>
+  <li><strong>Requirements:</strong> full-time enrollment for at least one academic year, valid F-1 status, at least 1 credit of graded CPT coursework (tuition must be paid for that course), and a secured offer before applying.</li>
+  <li><strong>Processing:</strong> ISS e-form processing runs 12–15 business days.</li>
+  <li><strong>Effect on OPT:</strong> part-time CPT has no effect on OPT eligibility. Twelve or more cumulative months of full-time CPT eliminates eligibility for post-completion OPT (and with it the STEM extension).</li>
+</ul>
+
+<h3>Optional Practical Training (OPT)</h3>
+<ul>
+  <li><strong>Application window:</strong> USCIS must receive the post-completion OPT application no earlier than 90 days before and no later than 60 days after the I-20 program end date; the I-765 must be filed within 30 days of the DSO's OPT recommendation in SEVIS.</li>
+  <li><strong>Start date:</strong> chosen by the student, within 60 days after program completion. USCIS processing is generally 3–5 months.</li>
+  <li><strong>No job offer required</strong> to apply for OPT.</li>
+  <li><strong>Unemployment trap:</strong> max 90 cumulative days of unemployment during the 12-month post-completion OPT period — exceeding it is a status violation. The clock starts at the later of the EAD start date or the program end date.</li>
+  <li><strong>STEM OPT:</strong> a CS degree qualifies, stacking 12 months OPT + 24 months STEM OPT = up to 36 months of work authorization. The employer must be E-Verify-registered and complete Form I-983. Unemployment is capped at 150 days cumulative across both periods.</li>
+  <li><strong>Proposed OPT fee (Oct 7, 2026):</strong> DHS released a <strong>proposed</strong> rule charging schools $70,000 per student for 12 months of OPT, plus $30,000 for the STEM extension. Proposed only — not in effect, and expected to face legal challenges before finalization. If it ever finalized, universities could gatekeep OPT authorization, so ask ISS how UB would handle it. <span class="cite">[Bloomberg Law, Oct 7, 2026]</span></li>
+</ul>
+
+<h3>H-1B in 2026–2027 (verify before acting)</h3>
+<ul>
+  <li>The cap lottery is now <strong>wage-weighted</strong> (effective Feb 2026): Level I prevailing wage = 1 entry, Level IV = 4 entries. Estimates put Level I selection odds ~48% below the old random baseline.</li>
+  <li>The <strong>$100,000 supplemental H-1B fee</strong> applies to cap-subject petitions for beneficiaries outside the U.S. needing consular processing. F-1 students already in the U.S. changing status — the standard OPT path — are exempt as of 2026. Update Oct 4, 2026: a second federal court (N.D. Cal., Sept 30, 2026, <em>Global Nurse Force v. Trump</em>) <strong>vacated</strong> the fee policies, expressly covering the September 2026 renewal — so a government win on appeal of the earlier Massachusetts ruling can no longer revive it. Agencies are barred from enforcing the fee until notice-and-comment rulemaking finishes. Separately, DHS is pursuing a permanent ~$103,000 fee through its own rulemaking, so verify the fee's status before relying on it. <span class="cite">[Reuters, Sept 30, 2026]</span></li>
+  <li>FY2027 registration ran March 4–19, 2026 (~$215/beneficiary); ~210,000 registrations for 85,000 slots — demand still exceeded supply roughly 2:1. Expect FY2028 registration ~March 2027.</li>
+  <li>Duration of status is under legal threat: a DHS <strong>final rule</strong> (July 17, 2026) would replace duration of status with fixed admission periods (program length, max 4 years; USCIS extension required for more time) and cut the post-study grace period from 60 to 30 days. A nationwide injunction (D. Mass., Sept 14, <em>Presidents' Alliance v. DHS</em>) blocked it one day before it took effect; DHS appealed to the First Circuit on Sept 30. While the injunction stands, duration of status remains the framework — but if the rule ever takes effect, anyone needing time past a printed program end date would need an I-539 extension. <span class="cite">[AILA; Immigration Analytics, Oct 2026]</span></li>
+</ul>
+
+<div class="callout">
+  <p><strong>The framing that matters in interviews:</strong> with 36 months of OPT + STEM OPT and the in-country H-1B change-of-status exemption, the ask is "I need no sponsorship for 3 years; when the time comes, an in-country H-1B change of status" — a materially cheaper ask than offshore sponsorship. Confirm every employer's H-1B, STEM OPT (E-Verify), and green-card initiation policy before final rounds.</p>
+</div>
+
+<div class="iss">
+  <p><strong>Confirm with UB International Student Services:</strong></p>
+  <p>iss@buffalo.edu · (716) 645-2258 · 210 Talbert Hall</p>
+  <p style="margin-top:10px">Ask specifically about: (1) whether 10–12 summer credits plus part-time CPT is approvable; (2) which course carries the CPT credit and its tuition cost; (3) the exact I-20 program end date — it drives the OPT window and the unemployment clock; (4) OPT fees and application steps; (5) employer eligibility for STEM OPT when the time comes.</p>
+</div>
+
+<h2>Market reality in 2026</h2>
+<ul>
+  <li><strong>Entry-level is structurally contracted; experienced and AI talent is not.</strong> New-grad hiring at big tech is down ~65% vs 2019, and new grads are ~7% of big-tech hires vs 32% in 2019 — but overall engineering hiring fell only ~11%, and early-stage startups hired 7% more engineers in 2025 than in 2019. <span class="cite">[SignalFire 2026 via Startup Fortune, Sept 2026]</span></li>
+  <li><strong>AI-engineer demand is the growth pocket.</strong> AI/ML postings grew ~85–88% year over year. The premium skills are LangChain, RAG, vector databases, and multi-agent orchestration — and hiring managers screen for deployed AI projects in real systems. <span class="cite">[TechTimes, Jun 2026; Ravio 2026]</span></li>
+  <li><strong>Volume is brutal; referrals dominate.</strong> Roughly 101 applications per offer on average. Referrals draw ~9.8% response vs ~1.1% for one-click Easy Apply, with ~40% hire rates vs 2–3%. Applying the day a posting goes live needs ~39% fewer applications per offer. <span class="cite">[Trackr 2026; job-seeker strategy data]</span></li>
+  <li><strong>Layoffs continue at the top of the market.</strong> ~52,050 tech layoffs announced in Q1 2026, the highest quarterly total since 2023; college-grad hiring sits ~44% below 2022. Early-career engineers are the hardest-hit group — which is exactly why competing as a "production-ready" engineer rather than a generic junior matters. <span class="cite">[AInvest, Aug 2026]</span></li>
+  <li><strong>Sponsorship is tightening selectively.</strong> Wage-weighted selection, the $100k consular fee, and expanded DOL audits push employers toward higher-paid, in-U.S. sponsorships (financial-sector H-1B filings fell ~10% YoY in early FY2026). But an F-1 student on OPT changing status inside the U.S. is in the least-bad sponsorship category, and 36 months of OPT + STEM OPT buys 3–4 lottery attempts. Best bets: funded startups ($10M+ raised) and mid/big tech with established immigration counsel. <span class="cite">[VisaVerge; sponsorship tracking, Aug 2026]</span></li>
+</ul>
+
+<h2>Channels and tactics</h2>
+<h3>Boards worth adding</h3>
+<ul>
+  <li><strong>YC jobs board</strong> (ycombinator.com/jobs) — the #1 surface for founding and AI-engineer roles at startups building LLM agents. Funded YC companies do sponsor; screen on funding.</li>
+  <li><strong>2027 new-grad GitHub boards with sponsorship filters</strong> — e.g. Ricsign's 2027 board (filters for "no U.S. citizenship required" and "sponsors visas"), aprameyak's 2027-tech-jobs, and the jobright-ai new-grad board.</li>
+  <li><strong>UB campus recruiting</strong> — career fairs and on-campus interviews; employers there are pre-screened for willingness to hire from UB. Check the Career Design Center's fall 2026 schedule.</li>
+  <li><strong>Consulting firms' tech practices</strong> — formal campus pipelines and in-house immigration teams; a solid #3-target backstop.</li>
+</ul>
+<h3>Tactics with 2026 evidence behind them</h3>
+<ol>
+  <li><strong>Referrals and personalized outreach first, Easy Apply last.</strong> Referrals are roughly 9x more effective than one-click apply. Ask warm contacts for informational calls (25–33% acceptance) rather than referrals outright — the referral often follows.</li>
+  <li><strong>Cold outreach to hiring managers at companies under ~200 people.</strong> Four-sentence formula: who you are → one specific shipped thing relevant to their team → why them specifically → the ask, CV attached. Rarely works at large companies — use referrals there.</li>
+  <li><strong>Build in public around the moat.</strong> Production AI-agent systems — MCP servers, the AI coach, Agriful — are the differentiator. Post working demos, architecture writeups, and failure stories on LinkedIn/X and GitHub. 41% of offers went to 10% of candidates in 2026: it's a differentiation game.</li>
+  <li><strong>Apply the day a posting goes live.</strong> Same-day applicants need ~39% fewer applications per offer.</li>
+  <li><strong>Disclose sponsorship needs early, framed correctly.</strong> "Three years, no sponsorship needed; then an in-country H-1B change of status" — and verify each employer's H-1B, STEM OPT, and green-card policy before final rounds.</li>
+</ol>
+
+<h2>Open questions</h2>
+<ul>
+  <li>Exact FY2028 H-1B registration dates (not yet announced; expected ~March 2027).</li>
+  <li>Whether UB ISS will approve part-time CPT alongside the specific summer-2027 enrollment; the exact I-20 program end date; CPT course and tuition cost. <strong>Confirm with ISS.</strong></li>
+  <li>Status of the $100k H-1B fee — enforcement is blocked by two federal court orders (Massachusetts, June 2026; N.D. Cal., Sept 30, 2026), the government appeal is live, and DHS is pursuing a separate ~$103K permanent fee through its own rulemaking — plus DHS's Oct 7, 2026 proposed OPT fee ($70K for 12-mo OPT, +$30K for the STEM extension, charged to schools; proposed, not final) — and the proposed F-1 grace-period cut to 30 days (proposed, not final).</li>
+  <li>Big-tech 2027 new-grad offer timelines beyond fall 2026 — postings are live now; closing dates vary by company.</li>
+</ul>
+
+<h2>Sources</h2>
+<ol class="sources">
+  <li>UB ISS, F-1 Off-Campus Employment Authorization — <a href="http://www.buffalo.edu/international-student-services/immigration-visa/f-1-student/f-1-off-campus-employment-authorization.html">buffalo.edu…/f-1-off-campus-employment-authorization.html</a> (verified live Sept 30, 2026)</li>
+  <li>UB ISS, E-form Processing Times — <a href="http://www.buffalo.edu/international-student-services/immigration-visa/e-form-processing-times.html">buffalo.edu…/e-form-processing-times.html</a></li>
+  <li>Harvard FAS, Tech Recruiting 2026–27 — <a href="https://careerservices.fas.harvard.edu/blog/2026/08/13/tech-recruiting-prepare-for-2025-2026-recruiting/">careerservices.fas.harvard.edu…</a></li>
+  <li>SignalFire 2026 via Startup Fortune — <a href="https://startupfortune.com/big-tech-quietly-stopped-hiring-junior-coders-and-the-data-proves-it/">startupfortune.com…</a></li>
+  <li>NACE 2026 internship conversion analysis — <a href="https://www.ainvest.com/news/internship-conversion-rate-year-high-wrong-number-2608/">ainvest.com…</a></li>
+  <li>H-1B 2026 rule changes — <a href="https://www.visaverge.com/h1b/uscis-h-1b-changes-impact-on-employers-explained/">visaverge.com…</a>; <a href="https://github.com/eugeneaayush/ib-or-die/blob/HEAD/11-mba-associate-specific/sponsorship-international-students.md">sponsorship doc (Aug 2026)</a>; <a href="https://www.lawsb.com/trump-targets-h-1b-lottery-with-wage-weighted-overhaul-and-100000-visa-filing-fee/">lawsb.com…</a></li>
+  <li>H-1B FY2027 cap data — <a href="https://www.visaverge.com/news/100000-h-1b-fee-fails-to-cut-visa-numbers-uscis-data-shows-under-presidential-proclamation/">visaverge.com…</a></li>
+  <li>Trackr 2026 internships report — <a href="https://www.linkedin.com/posts/the-trackr_summer-internships-season-report-2026-activity-7448317164853383168-4mzi">linkedin.com…</a></li>
+  <li>Entry-level tech market 2026 — <a href="https://www.techtimes.com/articles/317535/20260601/entry-level-tech-jobs-2026-148092-cuts-expose-which-skills-still-get-you-hired.htm">techtimes.com…</a>; <a href="https://www.einpresswire.com/article-pdf/882517781/entry-level-tech-hiring-plummets-73-as-companies-pivot-to-production-ready-ai-engineers-second-talent">einpresswire.com…</a></li>
+  <li>Job-search strategy data — <a href="https://github.com/galiprandi/job-seeker/blob/HEAD/STRATEGIES.md">github.com/galiprandi/job-seeker</a>; <a href="https://medium.com/@lvdarkred/how-to-land-a-tech-job-in-2026-why-general-swe-doesnt-cut-it-anymore-ee22745f68aa">medium.com/@lvdarkred</a></li>
+  <li>2027 new-grad boards — <a href="https://github.com/ricsign/Ricsign-New-Grads-Jobs-2027">ricsign/Ricsign-New-Grads-Jobs-2027</a>; <a href="https://github.com/aprameyak/2027-tech-jobs/blob/HEAD/README.md">aprameyak/2027-tech-jobs</a>; <a href="https://github.com/dumax315/cs-new-grad-scraper">dumax315/cs-new-grad-scraper</a>; <a href="https://github.com/jobright-ai/2026-Software-Engineer-New-Grad">jobright-ai/2026-Software-Engineer-New-Grad</a></li>
+  <li>OPT tutorials and deadlines — <a href="https://offices.depaul.edu/global-engagement/student-resources/student-services/Documents/OPT%20Tutorial%20Final_2025.11.21.pdf">DePaul OPT tutorial (PDF)</a>; <a href="https://www.visaverge.com/f1visa/important-dates-for-f-1-students-on-opt-in-the-u-s/">visaverge.com OPT dates</a></li>
+  <li>CPT rule background — <a href="https://legalclarity.org/cpt-for-f-1-students-uscis-rules-and-requirements/">legalclarity.org…</a>; <a href="https://www.zolve.com/blog/cpt-2026-update-what-the-new-rules-mean-for-international-students/">zolve.com…</a></li>
+</ol>
+
+<footer>
+  <p>Built from a deep-research briefing dated September 30, 2026. Immigration facts are general guidance — confirm case-specific details with <a href="http://www.buffalo.edu/international-student-services/immigration-visa/f-1-student/f-1-off-campus-employment-authorization.html">UB International Student Services</a>. Market data reflects 2026 reporting and moves fast.</p>
+  <p><a href="/">← Back to the Artifact Library</a></p>
+</footer>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Numbers — Know Your Exact Daily Output</title>
+<style>
+  :root{
+    --bg:#faf7f1; --card:#ffffff; --ink:#1f1c17; --muted:#6f6a5e;
+    --line:#e8e1d3; --gold:#b98a1e; --goldbg:#fdf6e3;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    background:var(--bg); color:var(--ink); line-height:1.5;
+    display:flex; justify-content:center; padding:48px 20px 64px;
+  }
+  .wrap{width:100%; max-width:620px;}
+  h1{font-size:34px; font-weight:700; letter-spacing:-0.5px; text-align:center;}
+  .sub{color:var(--muted); text-align:center; margin:10px 0 32px; font-size:16px;}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:24px; margin-bottom:16px;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media(max-width:520px){.grid2{grid-template-columns:1fr;}}
+  label{display:block; font-size:13px; font-weight:600; color:var(--muted); margin-bottom:6px;}
+  .field{position:relative;}
+  .field span{position:absolute; left:12px; top:50%; transform:translateY(-50%); color:var(--muted); font-size:16px;}
+  .field.suffix span{left:auto; right:12px;}
+  input{
+    width:100%; font-size:18px; padding:12px 12px 12px 30px;
+    border:1px solid var(--line); border-radius:10px; background:#fff; color:var(--ink);
+  }
+  .field.suffix input{padding:12px 34px 12px 12px;}
+  input:focus{outline:2px solid var(--gold); border-color:var(--gold);}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px;}
+  .chips button{
+    font-size:13px; padding:6px 12px; border-radius:999px; cursor:pointer;
+    border:1px solid var(--line); background:#fff; color:var(--ink);
+  }
+  .chips button:hover{border-color:var(--gold); color:var(--gold);}
+  .chips button.on{background:var(--ink); color:#fff; border-color:var(--ink);}
+  .headline{background:var(--goldbg); border:1px solid #ecd9a0; border-radius:14px; padding:28px 24px; text-align:center; margin-bottom:16px;}
+  .headline .num{font-size:52px; font-weight:800; color:var(--gold); letter-spacing:-1px; line-height:1.1;}
+  .headline .cap{font-size:15px; color:var(--muted); margin-top:6px;}
+  .funnel{display:grid; grid-template-columns:repeat(4,1fr); gap:12px;}
+  @media(max-width:520px){.funnel{grid-template-columns:repeat(2,1fr);}}
+  .step{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 12px; text-align:center;}
+  .step .v{font-size:26px; font-weight:700;}
+  .step .k{font-size:12px; color:var(--muted); margin-top:4px;}
+  .note{margin-top:16px; font-size:14px; color:var(--muted); text-align:center;}
+  .note strong{color:var(--ink);}
+  footer{margin-top:40px; text-align:center; font-size:13px; color:var(--muted);}
+  footer a{color:var(--muted);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>The Numbers</h1>
+  <p class="sub">Know your exact daily output. Track inputs, not vibes.</p>
+
+  <div class="card">
+    <div class="grid2">
+      <div>
+        <label for="goal">Monthly revenue goal</label>
+        <div class="field"><span>$</span><input id="goal" type="number" inputmode="numeric" value="50000" min="0"></div>
+      </div>
+      <div>
+        <label for="price">Average deal size</label>
+        <div class="field"><span>$</span><input id="price" type="number" inputmode="numeric" value="1500" min="1"></div>
+      </div>
+      <div>
+        <label for="days">Outreach days / month</label>
+        <div class="field suffix"><input id="days" type="number" inputmode="numeric" value="22" min="1" max="31"><span>days</span></div>
+      </div>
+      <div>
+        <label for="reply">Reply rate</label>
+        <div class="field suffix"><input id="reply" type="number" inputmode="decimal" value="10" min="0.1" max="100" step="0.5"><span>%</span></div>
+      </div>
+      <div>
+        <label for="close">Close rate <span style="font-weight:400">(of replies)</span></label>
+        <div class="field suffix"><input id="close" type="number" inputmode="decimal" value="20" min="0.1" max="100" step="0.5"><span>%</span></div>
+      </div>
+      <div>
+        <label>Deal presets</label>
+        <div class="chips" id="chips"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="headline">
+    <div class="num" id="perDay">–</div>
+    <div class="cap">outreach touches a day to hit <strong id="goalEcho">$50,000</strong>/mo</div>
+  </div>
+
+  <div class="funnel">
+    <div class="step"><div class="v" id="deals">–</div><div class="k">deals needed / mo</div></div>
+    <div class="step"><div class="v" id="replies">–</div><div class="k">replies needed</div></div>
+    <div class="step"><div class="v" id="touches">–</div><div class="k">total touches / mo</div></div>
+    <div class="step"><div class="v" id="perWeek">–</div><div class="k">touches / week</div></div>
+  </div>
+
+  <p class="note" id="lever"></p>
+
+  <footer><a href="/">← all tools</a></footer>
+</div>
+
+<script>
+const PRESETS = [
+  ["Audit", 350], ["AI Pilot", 500], ["Landing", 750],
+  ["Site", 1200], ["Brand Book", 1500], ["Storefront", 2500]
+];
+const $ = id => document.getElementById(id);
+const fmt$ = n => "$" + Math.round(n).toLocaleString("en-US");
+const fmtN = n => n >= 1000 ? (n/1000).toFixed(n>=10000?0:1).replace(/\.0$/,"") + "k" : Math.round(n).toString();
+
+const chipsEl = $("chips");
+PRESETS.forEach(([name, val]) => {
+  const b = document.createElement("button");
+  b.textContent = name + " " + fmt$(val);
+  b.onclick = () => { $("price").value = val; markChips(); calc(); save(); };
+  b.dataset.val = val;
+  chipsEl.appendChild(b);
+});
+function markChips(){
+  const v = +$("price").value;
+  [...chipsEl.children].forEach(b => b.classList.toggle("on", +b.dataset.val === v));
+}
+
+function calc(){
+  const G = Math.max(0, +$("goal").value || 0);
+  const P = Math.max(1, +$("price").value || 1);
+  const D = Math.min(31, Math.max(1, +$("days").value || 1));
+  const r = Math.min(100, Math.max(0.1, +$("reply").value || 0.1)) / 100;
+  const c = Math.min(100, Math.max(0.1, +$("close").value || 0.1)) / 100;
+
+  const deals = G / P;
+  const replies = deals / c;
+  const touches = replies / r;
+  const perDay = touches / D;
+  const perWeek = touches / (D / 5);
+
+  $("perDay").textContent = Math.ceil(perDay).toLocaleString("en-US");
+  $("goalEcho").textContent = fmt$(G);
+  $("deals").textContent = deals % 1 ? deals.toFixed(1) : deals;
+  $("replies").textContent = fmtN(Math.ceil(replies));
+  $("touches").textContent = fmtN(Math.ceil(touches));
+  $("perWeek").textContent = fmtN(Math.ceil(perWeek));
+
+  // leverage hint: what raising the deal size does
+  const alt = P * 1.5;
+  const altPerDay = Math.ceil((G / alt / c / r) / D);
+  $("lever").innerHTML = "Move the needle: at <strong>" + fmt$(alt) + "</strong> avg deal, it's <strong>" +
+    altPerDay.toLocaleString("en-US") + "/day</strong> instead of <strong>" +
+    Math.ceil(perDay).toLocaleString("en-US") + "/day</strong>.";
+  markChips();
+}
+
+function save(){
+  try{
+    localStorage.setItem("revenue-math", JSON.stringify({
+      goal:$("goal").value, price:$("price").value, days:$("days").value,
+      reply:$("reply").value, close:$("close").value
+    }));
+  }catch(e){}
+}
+function load(){
+  try{
+    const s = JSON.parse(localStorage.getItem("revenue-math") || "{}");
+    ["goal","price","days","reply","close"].forEach(k => { if(s[k] !== undefined) $(k).value = s[k]; });
+  }catch(e){}
+}
+
+document.querySelectorAll("input").forEach(i => i.addEventListener("input", () => { calc(); save(); }));
+load(); calc();
+</script>
+</body>
+</html>

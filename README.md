@@ -69,3 +69,4 @@ To wire it up (run in a normal turn, not a background run):
 5. After this is done, replace step 3 of "How to add an artifact" with:
    `gh-push mbs5/artifact-library ~/workspace/artifact-library` (Vercel
    auto-deploys on push).
+
